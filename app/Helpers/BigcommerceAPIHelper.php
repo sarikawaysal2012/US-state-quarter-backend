@@ -23,15 +23,13 @@ class BigcommerceAPIHelper
         CURLOPT_HTTPHEADER => [
             "Accept: application/json",
             "Content-Type: application/json",
-            "X-Auth-Token: " .env('BC_DEV_ACCESS_TOKEN')
+            "X-Auth-Token: " . env('BC_DEV_ACCESS_TOKEN')
         ],
         ]);
         
 
-        $response = curl_exec($curl);return $response;
+        $response = curl_exec($curl);
         $err = curl_error($curl);
-
-        return 'my response'.$response;
 
         curl_close($curl);
 
